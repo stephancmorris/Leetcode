@@ -1,0 +1,58 @@
+# You are given a binary matrix Grid where 0s represent land and 1s represent rocks that can not be traversed.
+
+# Return the length of the shortest path from the top-left corner of Grid to the bottom-right corner such that all traversed cells are land cells. You may only move vertically or horizontally through land cells.
+
+#  Let's annotate the given Matrix Breadth-First Search (BFS) code. This code is designed to find the shortest path in a grid from the top-left corner to the bottom-right corner, avoiding cells with a value of 1. Here's the code with comments explaining each part:
+
+
+from collections import deque
+
+class Solution:
+    def shortestPath(self, grid: List[List[int]]) -> int:
+        # Initializing the number of rows and columns
+        ROWS, COLS = len(grid), len(grid[0])
+
+        # Using a set to keep track of visited cells
+        visit = set()
+        # Initializing a queue for BFS
+        queue = deque()
+        # Starting from the top-left corner
+        queue.append((0, 0))
+        visit.add((0, 0))
+
+        # Variable to keep track of the length of the shortest path
+        length = 0
+        while queue:
+            # Iterate over the current level in the queue
+            for i in range(len(queue)):
+                r, c = queue.popleft()  # Dequeue the front cell
+
+                # Check if the bottom-right cell is reached
+                if r == ROWS - 1 and c == COLS - 1:
+                    return length
+
+                # Define the possible moves (right, left, down, up)
+                neighbors = [[0, 1], [0, -1], [1, 0], [-1, 0]]
+                for dr, dc in neighbors:
+                    # Check for valid, unvisited, and unblocked neighboring cells
+                    if (min(r + dr, c + dc) < 0 or
+                        r + dr == ROWS or c + dc == COLS or
+                        (r + dr, c + dc) in visit or grid[r + dr][c + dc] == 1):
+                        continue
+                    # Add valid neighbors to the queue and mark them as visited
+                    queue.append((r + dr, c + dc))
+                    visit.add((r + dr, c + dc))
+            # Increment the path length after exploring all neighbors at the current level
+            length += 1
+        
+        # Return -1 if the bottom-right cell is unreachable
+        return -1
+
+
+# **Time Complexity:**
+# - The time complexity of this algorithm is O(ROWS * COLS), as each cell in the grid is visited at most once. The BFS ensures that each cell is accessed in the most efficient manner to find the shortest path.
+
+# **Space Complexity:**
+# - The space complexity is also O(ROWS * COLS) in the worst case. This is because in the worst-case scenario, all cells might end up being added to the queue and the visit set.
+
+# BFS is an excellent choice for finding the shortest path in a grid-like structure as it explores all possible paths level by level. This ensures that the first time the end is reached, it's the shortest possible path.

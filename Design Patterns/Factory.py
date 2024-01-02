@@ -35,3 +35,4 @@ class TruckFactory(VehicleFactory):
     def createVehicle(self) -> Vehicle:
         return Truck()
 
+ 
