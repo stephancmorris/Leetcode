@@ -1,8 +1,7 @@
 class ListNode:
-    def __init__(self, val, next_node=None):
+    def __init__(self, val=0, next_node=None):
         self.val = val          # The value stored in the node
         self.next = next_node   # The reference to the next node; defaults to None
-
 
 
 class LinkedList:
