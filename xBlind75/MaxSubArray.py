@@ -1,4 +1,5 @@
 def maxSubArray(nums):
+    #Max Sub Arrary
     current_sum = max_sum = nums[0]
     for num in nums[1:]:
         current_sum = max(num, current_sum + num) 
