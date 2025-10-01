@@ -5,7 +5,7 @@ class TreeNode:
         self.left = None      # Pointer to left child
         self.right = None     # Pointer to right child
 
-#This class implements a binary search tree map using the TreeNode class.
+#This class implements a binary search tree map using the TreeNode class. New
 class TreeMap:
     def __init__(self):
         self.root = None  # Root of the BST
