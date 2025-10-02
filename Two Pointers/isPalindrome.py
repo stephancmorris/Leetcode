@@ -24,7 +24,7 @@ class Solution:
         # If all characters have been checked and matched, the string is a palindrome.
         return True
 
-# Helper function to determine if a character is alphanumeric.
+# is Palaindrome Helper function to determine if a character is alphanumeric.
     def alphanum(self, c):
         # Check if the ASCII value of 'c' is within the ranges of 'A'-'Z', 'a'-'z', or '0'-'9'.
         return (
