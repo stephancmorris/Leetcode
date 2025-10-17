@@ -24,6 +24,21 @@ Each topic folder generally contains subfolders or files named after the specifi
 
 ---
 
+## 📈 Topic Completion Status
+
+This section provides a high-level view of my coverage across different topics.
+
+- [x] Arrays
+- [x] Basics
+- [ ] Design Patterns
+- [x] Graphs
+- [x] Sliding Windows
+- [ ] Sorting
+- [x] Stacks
+- [x] Two Pointers
+- [ ] xBlind75 (In Progress)
+---
+
 ## 🛠️ Key Details
 
 | Detail | Value |
