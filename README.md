@@ -64,12 +64,5 @@ cd 03_Blind_75/Easy/
 - **Week 9-10**: Complete LeetCode 150 problems
 - **Week 11-12**: Review, mock interviews, and system design
 
-## 💡 Tips for Success
-
-1. **Code by hand first** - Practice writing solutions without IDE assistance
-2. **Explain your approach** - Verbalize your thought process
-3. **Optimize iteratively** - Start with brute force, then optimize
-4. **Time yourself** - Practice solving problems within 20-30 minutes
-5. **Review regularly** - Revisit solved problems weekly
 
 Good luck with your FAANG interview preparation! 🎉
