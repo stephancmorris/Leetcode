@@ -1,6 +1,6 @@
 """
 LeetCode 53. Maximum Subarray
-Difficulty: Easy
+Difficulty: Medium
 Category: Arrays & Hashing
 
 Given an integer array nums, find the contiguous subarray (containing at least one number) 
