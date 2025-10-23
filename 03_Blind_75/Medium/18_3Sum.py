@@ -23,3 +23,88 @@ def threeSum(nums):
     """
     # TODO: Implement your solution here
     pass
+
+
+# Test cases
+def test_three_sum():
+    """Test cases for 3Sum"""
+    test_cases = [
+        # Basic test cases
+        ([-1, 0, 1, 2, -1, -4], [[-1, -1, 2], [-1, 0, 1]]),
+        ([0, 1, 1], []),
+        ([0, 0, 0], [[0, 0, 0]]),
+        
+        # Edge cases
+        ([], []),
+        ([0], []),
+        ([0, 0], []),
+        ([0, 0, 0, 0], [[0, 0, 0]]),
+        ([1, 2, 3], []),
+        ([-1, 0, 1], [[-1, 0, 1]]),
+        
+        # LeetCode test cases
+        ([-1, 0, 1, 2, -1, -4], [[-1, -1, 2], [-1, 0, 1]]),
+        ([0, 1, 1], []),
+        ([0, 0, 0], [[0, 0, 0]]),
+        
+        # Additional test cases
+        ([-2, 0, 1, 1, 2], [[-2, 0, 2], [-2, 1, 1]]),
+        ([-1, 0, 1, 2, -1, -4], [[-1, -1, 2], [-1, 0, 1]]),
+        ([1, 2, -2, -1], []),
+        ([-1, 0, 1, 0], [[-1, 0, 1]]),
+        
+        # Duplicates
+        ([0, 0, 0, 0], [[0, 0, 0]]),
+        ([1, 1, -2], [[1, 1, -2]]),
+        ([-1, -1, 2], [[-1, -1, 2]]),
+        
+        # Large numbers
+        ([1000000000, -1000000000, 0], [[-1000000000, 0, 1000000000]]),
+        
+        # Negative numbers
+        ([-1, -2, -3, 6], [[-1, -2, 3]]),
+        ([-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6], [[-4, -2, 6], [-4, 0, 4], [-4, 1, 3], [-4, 2, 2], [-2, -2, 4], [-2, 0, 2]]),
+    ]
+    
+    print("Testing 3Sum solution...")
+    for i, (nums, expected) in enumerate(test_cases):
+        result = threeSum(nums)
+        # Sort each triplet and the overall result for comparison
+        result_sorted = [sorted(triplet) for triplet in result]
+        result_sorted.sort()
+        expected_sorted = [sorted(triplet) for triplet in expected]
+        expected_sorted.sort()
+        
+        if result_sorted == expected_sorted:
+            print(f"✓ Test {i+1} passed: nums={nums}")
+            print(f"  Number of triplets: {len(result)}")
+        else:
+            print(f"✗ Test {i+1} failed: nums={nums}")
+            print(f"  Expected {len(expected)} triplets, Got {len(result)} triplets")
+            print(f"  Expected: {expected}")
+            print(f"  Got: {result}")
+    
+    print("\nAll tests completed!")
+
+
+# Performance test
+def test_performance():
+    """Test solution performance with large input"""
+    import time
+    import random
+    
+    # Generate large array
+    large_nums = [random.randint(-1000, 1000) for _ in range(1000)]
+    
+    start_time = time.time()
+    result = threeSum(large_nums)
+    end_time = time.time()
+    
+    print(f"\nPerformance Test:")
+    print(f"Large array (1,000 elements): {end_time - start_time:.4f} seconds")
+    print(f"Number of triplets: {len(result)}")
+
+
+if __name__ == "__main__":
+    test_three_sum()
+    test_performance()
