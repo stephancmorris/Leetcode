@@ -42,8 +42,6 @@ Each problem folder contains:
 - Common variations and follow-ups
 - Interview tips and gotchas
 
-## 🚀 Quick Start
-
 ```bash
 # Navigate to a specific topic
 cd 01_Data_Structures/Basic/
