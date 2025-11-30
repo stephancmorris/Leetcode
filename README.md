@@ -1,4 +1,4 @@
-# LeetCode Study Guide - FAANG Interview Preparation
+# LeetCode Study Prep
 
 This repository is structured to help you systematically prepare for FAANG-level technical interviews. The organization follows a progressive learning path from fundamental data structures to advanced algorithmic patterns.
 
@@ -41,8 +41,6 @@ Each problem folder contains:
 - Time and space complexity analysis
 - Common variations and follow-ups
 - Interview tips and gotchas
-
-## 🚀 Quick Start
 
 ```bash
 # Navigate to a specific topic

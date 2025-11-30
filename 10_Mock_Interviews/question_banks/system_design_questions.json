@@ -1,0 +1,264 @@
+{
+  "questions": [
+    {
+      "id": "url_shortener",
+      "title": "Design a URL Shortener (like bit.ly)",
+      "difficulty": "medium",
+      "category": "web-services",
+      "description": "Design a URL shortening service that converts long URLs into short, shareable links.",
+      "requirements": {
+        "functional": [
+          "Shorten a long URL to a short URL",
+          "Redirect short URL to original long URL",
+          "Support custom short URLs (optional)",
+          "Track click analytics (optional)"
+        ],
+        "non_functional": [
+          "Handle 100M URLs per day",
+          "99.9% uptime",
+          "Redirect latency < 100ms",
+          "Support 10:1 read/write ratio"
+        ],
+        "scale": {
+          "daily_active_users": "10M",
+          "urls_per_user_per_day": "10",
+          "peak_traffic_multiplier": "3x"
+        }
+      },
+      "evaluation_criteria": [
+        "Requirements clarification",
+        "Capacity estimation",
+        "High-level design (components, APIs)",
+        "Database schema design",
+        "URL encoding strategy",
+        "Caching strategy",
+        "Scaling considerations",
+        "Trade-off analysis"
+      ],
+      "hints": [
+        "Consider Base62 encoding for short URLs",
+        "Think about database sharding strategies",
+        "Consider using a cache for frequently accessed URLs",
+        "Discuss trade-offs between different encoding approaches"
+      ],
+      "expected_duration": 45,
+      "startup_friendly": true
+    },
+    {
+      "id": "todo_app",
+      "title": "Design a Todo Application",
+      "difficulty": "easy",
+      "category": "web-services",
+      "description": "Design a todo application that allows users to create, read, update, and delete tasks.",
+      "requirements": {
+        "functional": [
+          "User authentication and authorization",
+          "Create, read, update, delete todos",
+          "Mark todos as complete/incomplete",
+          "Organize todos by categories or tags",
+          "Search todos"
+        ],
+        "non_functional": [
+          "Handle 1M users",
+          "Support 10K requests per second",
+          "Response time < 200ms for 95% of requests",
+          "Data consistency is important"
+        ],
+        "scale": {
+          "daily_active_users": "500K",
+          "todos_per_user": "50",
+          "operations_per_user_per_day": "20"
+        }
+      },
+      "evaluation_criteria": [
+        "API design (RESTful endpoints)",
+        "Database schema",
+        "Authentication/authorization approach",
+        "Caching strategy",
+        "Search functionality",
+        "Scalability considerations"
+      ],
+      "hints": [
+        "Start with basic CRUD operations",
+        "Consider using JWT for authentication",
+        "Think about indexing strategies for search",
+        "Discuss caching frequently accessed user data"
+      ],
+      "expected_duration": 45,
+      "startup_friendly": true
+    },
+    {
+      "id": "chat_app",
+      "title": "Design a Real-time Chat Application",
+      "difficulty": "medium",
+      "category": "real-time",
+      "description": "Design a chat application that supports one-on-one and group messaging with real-time delivery.",
+      "requirements": {
+        "functional": [
+          "Send and receive messages in real-time",
+          "Support one-on-one and group chats",
+          "Message history and persistence",
+          "Online/offline status",
+          "Push notifications (optional)"
+        ],
+        "non_functional": [
+          "Handle 5M concurrent users",
+          "Message delivery latency < 100ms",
+          "Support 1M messages per second",
+          "99.9% message delivery guarantee"
+        ],
+        "scale": {
+          "daily_active_users": "10M",
+          "messages_per_user_per_day": "50",
+          "peak_concurrent_connections": "5M"
+        }
+      },
+      "evaluation_criteria": [
+        "Real-time communication approach (WebSockets, etc.)",
+        "Message storage and retrieval",
+        "Scaling WebSocket connections",
+        "Message ordering and delivery guarantees",
+        "Database design for chat history",
+        "Caching strategy for active chats"
+      ],
+      "hints": [
+        "Consider WebSockets for real-time communication",
+        "Think about message queues for reliability",
+        "Discuss strategies for scaling WebSocket servers",
+        "Consider read receipts and message status"
+      ],
+      "expected_duration": 60,
+      "startup_friendly": true
+    },
+    {
+      "id": "analytics_dashboard",
+      "title": "Design an Analytics Dashboard",
+      "difficulty": "medium",
+      "category": "data-processing",
+      "description": "Design a system that collects, processes, and displays analytics data for a web application.",
+      "requirements": {
+        "functional": [
+          "Collect user events (page views, clicks, etc.)",
+          "Store and aggregate event data",
+          "Display real-time and historical analytics",
+          "Support filtering and time-range selection",
+          "Generate reports"
+        ],
+        "non_functional": [
+          "Handle 100M events per day",
+          "Support real-time queries (< 1 second)",
+          "Historical data queries (< 5 seconds)",
+          "99.9% data accuracy"
+        ],
+        "scale": {
+          "daily_active_users": "5M",
+          "events_per_user_per_day": "100",
+          "peak_events_per_second": "50K"
+        }
+      },
+      "evaluation_criteria": [
+        "Event collection strategy",
+        "Data storage (time-series database considerations)",
+        "Real-time vs batch processing",
+        "Data aggregation and pre-computation",
+        "Query optimization",
+        "Data retention policies"
+      ],
+      "hints": [
+        "Consider time-series databases for event data",
+        "Think about pre-aggregating data for common queries",
+        "Discuss trade-offs between real-time and batch processing",
+        "Consider data partitioning by time"
+      ],
+      "expected_duration": 60,
+      "startup_friendly": true
+    },
+    {
+      "id": "file_storage",
+      "title": "Design a File Storage System",
+      "difficulty": "medium",
+      "category": "storage",
+      "description": "Design a system for storing and retrieving user-uploaded files (images, documents, etc.).",
+      "requirements": {
+        "functional": [
+          "Upload files of various types",
+          "Download files",
+          "Generate thumbnails for images",
+          "Support file versioning",
+          "Share files with links"
+        ],
+        "non_functional": [
+          "Handle 10M files",
+          "Support files up to 100MB",
+          "Upload/download speed optimization",
+          "99.9% availability",
+          "Cost-effective storage"
+        ],
+        "scale": {
+          "daily_active_users": "1M",
+          "files_per_user": "100",
+          "uploads_per_day": "5M"
+        }
+      },
+      "evaluation_criteria": [
+        "Storage architecture (object storage vs block storage)",
+        "File upload/download flow",
+        "CDN integration for fast delivery",
+        "Thumbnail generation strategy",
+        "Metadata storage",
+        "Cost optimization strategies"
+      ],
+      "hints": [
+        "Consider using object storage (S3, etc.)",
+        "Think about CDN for file delivery",
+        "Discuss async processing for thumbnails",
+        "Consider file deduplication"
+      ],
+      "expected_duration": 45,
+      "startup_friendly": true
+    },
+    {
+      "id": "rate_limiter",
+      "title": "Design a Rate Limiting System",
+      "difficulty": "medium",
+      "category": "infrastructure",
+      "description": "Design a rate limiting system to prevent API abuse and ensure fair usage.",
+      "requirements": {
+        "functional": [
+          "Limit requests per user/IP",
+          "Support different rate limit rules (per minute, per hour, etc.)",
+          "Return appropriate HTTP status codes",
+          "Support whitelisting/blacklisting",
+          "Distributed rate limiting"
+        ],
+        "non_functional": [
+          "Handle 1M requests per second",
+          "Rate limit check latency < 10ms",
+          "99.9% accuracy",
+          "Support multiple rate limit strategies"
+        ],
+        "scale": {
+          "requests_per_second": "1M",
+          "unique_users": "10M",
+          "rate_limit_rules": "1000"
+        }
+      },
+      "evaluation_criteria": [
+        "Rate limiting algorithms (token bucket, sliding window, etc.)",
+        "Storage strategy for counters",
+        "Distributed system considerations",
+        "Performance optimization",
+        "Edge cases and race conditions"
+      ],
+      "hints": [
+        "Consider Redis for storing rate limit counters",
+        "Discuss different algorithms (fixed window, sliding window, token bucket)",
+        "Think about distributed systems and consistency",
+        "Consider rate limit headers in responses"
+      ],
+      "expected_duration": 45,
+      "startup_friendly": true
+    }
+  ]
+}
+

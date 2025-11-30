@@ -1,0 +1,200 @@
+{
+  "scenarios": [
+    {
+      "id": "api_endpoint",
+      "title": "Build a REST API Endpoint",
+      "difficulty": "easy",
+      "category": "backend",
+      "description": "Implement a REST API endpoint for managing user profiles in a web application.",
+      "task": "Create an endpoint that allows users to update their profile information. The endpoint should validate input, update the database, and return appropriate responses.",
+      "requirements": [
+        "Endpoint: PUT /api/users/:id/profile",
+        "Accept JSON payload with fields: name, email, bio",
+        "Validate email format",
+        "Validate name length (1-100 characters)",
+        "Return 200 on success, 400 on validation error, 404 if user not found",
+        "Handle concurrent updates appropriately"
+      ],
+      "tech_stack": "Python (Flask/FastAPI) or Node.js (Express)",
+      "evaluation_criteria": [
+        "Code structure and organization",
+        "Error handling",
+        "Input validation",
+        "Database interaction",
+        "Testing approach",
+        "Code readability"
+      ],
+      "hints": [
+        "Consider using a validation library",
+        "Think about transaction handling",
+        "Discuss error response format",
+        "Consider rate limiting for this endpoint"
+      ],
+      "expected_duration": 30,
+      "startup_friendly": true
+    },
+    {
+      "id": "data_processing",
+      "title": "Process and Aggregate Data",
+      "difficulty": "medium",
+      "category": "data-processing",
+      "description": "Build a function that processes a stream of events and calculates real-time statistics.",
+      "task": "Given a stream of user activity events, calculate the number of active users per hour and the most popular actions.",
+      "requirements": [
+        "Process events with format: {userId, action, timestamp}",
+        "Calculate active users per hour (users who performed at least one action)",
+        "Find top 5 most popular actions",
+        "Handle events arriving out of order (within 5 minutes)",
+        "Optimize for memory usage"
+      ],
+      "tech_stack": "Python or JavaScript",
+      "evaluation_criteria": [
+        "Algorithm efficiency",
+        "Data structure choices",
+        "Edge case handling",
+        "Code clarity",
+        "Memory optimization",
+        "Testing strategy"
+      ],
+      "hints": [
+        "Consider using a sliding window approach",
+        "Think about data structures for counting",
+        "Discuss trade-offs between accuracy and memory",
+        "Consider using a heap for top-K problems"
+      ],
+      "expected_duration": 45,
+      "startup_friendly": true
+    },
+    {
+      "id": "feature_implementation",
+      "title": "Implement a Search Feature",
+      "difficulty": "medium",
+      "category": "full-stack",
+      "description": "Add a search feature to an existing application that allows users to search for products.",
+      "task": "Implement a search feature that searches through product names and descriptions, with support for filters and sorting.",
+      "requirements": [
+        "Search by product name and description",
+        "Support partial matches",
+        "Filter by category and price range",
+        "Sort by relevance, price, or date",
+        "Return paginated results (10 items per page)",
+        "Handle empty search gracefully"
+      ],
+      "tech_stack": "Any language/framework",
+      "evaluation_criteria": [
+        "Search algorithm/implementation",
+        "Database query optimization",
+        "API design",
+        "User experience considerations",
+        "Performance considerations",
+        "Code organization"
+      ],
+      "hints": [
+        "Consider full-text search capabilities",
+        "Think about indexing strategies",
+        "Discuss search ranking/relevance",
+        "Consider caching popular searches"
+      ],
+      "expected_duration": 45,
+      "startup_friendly": true
+    },
+    {
+      "id": "bug_fix",
+      "title": "Debug and Fix a Performance Issue",
+      "difficulty": "medium",
+      "category": "debugging",
+      "description": "A web application is experiencing slow response times. Identify and fix the performance bottleneck.",
+      "task": "Given a codebase with a performance issue, identify the problem, explain the root cause, and implement a fix.",
+      "scenario": "An endpoint that returns user activity logs is taking 5+ seconds to respond. The endpoint queries a database and processes the results.",
+      "code_snippet": "// Pseudo-code showing the issue\nfunction getUserActivity(userId) {\n  const logs = db.query('SELECT * FROM activity_logs WHERE user_id = ?', userId);\n  return logs.map(log => {\n    const user = db.query('SELECT * FROM users WHERE id = ?', log.actor_id);\n    const action = db.query('SELECT * FROM actions WHERE id = ?', log.action_id);\n    return { ...log, user: user, action: action };\n  });\n}",
+      "requirements": [
+        "Identify the N+1 query problem",
+        "Optimize database queries",
+        "Maintain functionality",
+        "Improve response time to < 500ms",
+        "Add appropriate indexes if needed"
+      ],
+      "evaluation_criteria": [
+        "Problem identification",
+        "Solution approach",
+        "Code optimization",
+        "Understanding of database queries",
+        "Testing the fix"
+      ],
+      "hints": [
+        "Look for repeated database queries in loops",
+        "Consider using JOINs or batch queries",
+        "Think about database indexing",
+        "Consider caching if appropriate"
+      ],
+      "expected_duration": 30,
+      "startup_friendly": true
+    },
+    {
+      "id": "refactoring",
+      "title": "Refactor Legacy Code",
+      "difficulty": "medium",
+      "category": "code-quality",
+      "description": "Refactor a piece of legacy code to improve maintainability while preserving functionality.",
+      "task": "Refactor a function that has grown too large and complex. Improve code organization, readability, and testability.",
+      "requirements": [
+        "Break down large function into smaller functions",
+        "Improve variable naming",
+        "Add proper error handling",
+        "Maintain backward compatibility",
+        "Add unit tests",
+        "Improve code documentation"
+      ],
+      "evaluation_criteria": [
+        "Code organization",
+        "Function decomposition",
+        "Naming conventions",
+        "Error handling",
+        "Test coverage",
+        "Documentation"
+      ],
+      "hints": [
+        "Identify single responsibility principle violations",
+        "Extract repeated code into functions",
+        "Consider design patterns if appropriate",
+        "Ensure tests cover edge cases"
+      ],
+      "expected_duration": 40,
+      "startup_friendly": true
+    },
+    {
+      "id": "integration",
+      "title": "Integrate Third-Party API",
+      "difficulty": "easy",
+      "category": "integration",
+      "description": "Integrate a third-party payment API into an existing e-commerce application.",
+      "task": "Add payment processing functionality using a third-party payment provider (Stripe, PayPal, etc.).",
+      "requirements": [
+        "Create payment processing endpoint",
+        "Handle API authentication",
+        "Implement error handling and retries",
+        "Store transaction records",
+        "Handle webhooks for payment status updates",
+        "Add logging for debugging"
+      ],
+      "tech_stack": "Any language/framework",
+      "evaluation_criteria": [
+        "API integration approach",
+        "Error handling",
+        "Security considerations",
+        "Transaction management",
+        "Webhook handling",
+        "Testing strategy"
+      ],
+      "hints": [
+        "Consider idempotency for payment requests",
+        "Think about webhook signature verification",
+        "Discuss retry strategies",
+        "Consider async processing for webhooks"
+      ],
+      "expected_duration": 45,
+      "startup_friendly": true
+    }
+  ]
+}
+
