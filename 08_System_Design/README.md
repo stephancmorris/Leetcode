@@ -4,6 +4,135 @@
 
 This comprehensive guide covers all essential topics for system design interviews, organized by difficulty and importance.
 
+## 🎯 How to Use This Folder
+
+### Overview
+
+This folder contains a structured approach to learning system design, from fundamental concepts to real-world examples. The materials are organized into logical sections that build upon each other.
+
+### Study Approach
+
+**For Beginners:**
+1. Start with `01_Core_Concepts/` - Master the fundamentals
+2. Move to `02_Scalability/` - Understand scaling principles
+3. Study `03_Data_Storage/` - Learn database design
+4. Review `04_Communication/` - Understand APIs and messaging
+5. Learn `05_Security/` - Security fundamentals
+6. Practice with `06_Real_World_Examples/` - Apply concepts
+7. Prepare with `07_Interview_Prep/` - Interview strategies
+
+**For Intermediate Learners:**
+- Review core concepts quickly
+- Deep dive into architecture patterns
+- Focus on real-world examples
+- Practice system design questions
+
+**For Advanced Learners:**
+- Use as reference material
+- Focus on advanced topics
+- Practice complex system designs
+- Review interview strategies
+
+## 🔧 How to Address Each Topic
+
+### Core Concepts (Start Here)
+
+1. **System Design Fundamentals**
+   - Read `01_Core_Concepts/System_Design_Fundamentals.md`
+   - Understand scalability, reliability, availability
+   - Learn performance metrics and consistency models
+   - **Time**: 2-3 hours
+
+2. **Load Balancing**
+   - Read `01_Core_Concepts/Load_Balancing.md`
+   - Understand different types and algorithms
+   - Learn when to use each approach
+   - **Time**: 1-2 hours
+
+3. **Caching Strategies**
+   - Read `01_Core_Concepts/Caching_Strategies.md`
+   - Understand cache patterns and eviction policies
+   - Learn consistency models for caching
+   - **Time**: 2-3 hours
+
+### Scalability
+
+1. **Read Scalability_Concepts.md**
+   - Understand horizontal vs vertical scaling
+   - Learn scaling patterns and strategies
+   - Study capacity planning
+   - **Time**: 2-3 hours
+
+2. **Practice**
+   - Design systems that scale
+   - Calculate capacity requirements
+   - Identify bottlenecks
+
+### Data Storage
+
+1. **Read Database_Design.md**
+   - Understand SQL vs NoSQL
+   - Learn replication and sharding
+   - Study consistency models
+   - **Time**: 3-4 hours
+
+2. **Practice**
+   - Design database schemas
+   - Plan scaling strategies
+   - Handle data consistency
+
+### Communication
+
+1. **Read API_Design.md**
+   - Learn RESTful API design
+   - Understand API versioning
+   - Study authentication/authorization
+   - **Time**: 2-3 hours
+
+2. **Practice**
+   - Design APIs for systems
+   - Plan message queue architectures
+   - Design service communication
+
+### Security
+
+1. **Read Security_Concepts.md**
+   - Understand authentication methods
+   - Learn authorization patterns
+   - Study security best practices
+   - **Time**: 2-3 hours
+
+2. **Practice**
+   - Design secure systems
+   - Plan authentication flows
+   - Consider security in all designs
+
+### Real-World Examples
+
+1. **Study Each Example**
+   - Read the problem statement
+   - Design the system yourself first
+   - Compare with the solution
+   - **Time**: 1-2 hours per example
+
+2. **Practice Variations**
+   - Modify requirements
+   - Scale up or down
+   - Add new features
+
+### Interview Preparation
+
+1. **Read Interview_Preparation.md**
+   - Understand interview format
+   - Learn the step-by-step approach
+   - Study common mistakes
+   - **Time**: 1-2 hours
+
+2. **Practice**
+   - Mock interviews
+   - Time yourself
+   - Get feedback
+
 ## 📚 Core Concepts (Must Know)
 
 ### 1. System Design Fundamentals

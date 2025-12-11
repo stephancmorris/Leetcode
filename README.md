@@ -61,6 +61,3 @@ cd 03_Blind_75/Easy/
 - **Week 7-8**: Solve Blind 75 problems (second pass, focus on optimization)
 - **Week 9-10**: Complete LeetCode 150 problems
 - **Week 11-12**: Review, mock interviews, and system design
-
-
-Good luck with your FAANG interview preparation! 🎉

@@ -22,6 +22,8 @@ def isPalindrome(s):
         Boolean indicating if string is palindrome
     """
     # TODO: Implement your solution here
+    # Solution 1: Two Pointers
+    # Space and time complexity: O(n)
     left, right = 0, len(s) - 1
     while left < right:
         if s[left] != s[right]:
@@ -31,29 +33,6 @@ def isPalindrome(s):
     return True
     pass
 
-    #Possible Solutions:
-    # 1. Two Pointers
-    # 2. Recursion
-    # 3. Iterative
-    # 4. Dynamic Programming
-    # 5. Backtracking
-    # 6. Greedy
-    # 7. Brute Force
-    # 8. Divide and Conquer
-    # 9. Bit Manipulatio
-
-# Solution Sliding Window
-# Space and time complexity: O(n)
-def isPalindrome(s):
-    left, right = 0, len(s) - 1
-    while left < right:
-        if s[left] != s[right]:
-            return False
-        left += 1
-        right -= 1
-    return True
-    
-    #Solution accouting for spaces and punctuation
 
 
     

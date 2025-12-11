@@ -2,6 +2,87 @@
 
 A comprehensive mock interview framework designed to help you practice for technical interviews at startups and smaller companies. This system supports LeetCode-style coding problems, system design questions, and pair programming scenarios.
 
+## 🎯 How to Use This Folder
+
+### Overview
+
+This folder contains a complete mock interview system that helps you practice for technical interviews. It tracks your progress, provides analytics, and offers three types of interview practice: LeetCode coding, System Design, and Pair Programming.
+
+### Quick Start
+
+1. **Run an Interview**: `python interview_runner.py`
+2. **View Analytics**: `python analytics.py`
+3. **Review Sessions**: Check `sessions/session_history.json`
+
+## 🔧 How to Address Each Interview Type
+
+### LeetCode Interviews
+
+**When to Use:**
+- Practicing coding problems
+- Preparing for technical coding rounds
+- Building problem-solving speed
+- Learning algorithmic patterns
+
+**How to Approach:**
+1. **Select Difficulty**: Start with Easy, progress to Medium/Hard
+2. **Read Carefully**: Understand the problem fully before coding
+3. **Think First**: Plan your approach, consider edge cases
+4. **Code**: Implement your solution
+5. **Test**: Verify with examples
+6. **Review**: Check optimal solutions after completion
+
+**Best Practices:**
+- Time yourself (Easy: 15-20 min, Medium: 25-35 min, Hard: 40-60 min)
+- Explain your thought process out loud
+- Start with brute force, then optimize
+- Handle edge cases explicitly
+
+### System Design Interviews
+
+**When to Use:**
+- Preparing for system design rounds
+- Learning to design scalable systems
+- Understanding architecture patterns
+- Practicing communication skills
+
+**How to Approach:**
+1. **Clarify Requirements**: Ask about scale, constraints, features
+2. **Estimate Scale**: Calculate traffic, storage, bandwidth
+3. **High-Level Design**: Draw the overall architecture
+4. **Detail Components**: Deep dive into specific parts
+5. **Address Scaling**: Handle scalability challenges
+6. **Discuss Trade-offs**: Consider alternatives
+
+**Best Practices:**
+- Always clarify requirements first
+- Start simple, add complexity gradually
+- Draw clear diagrams
+- Think out loud
+- Discuss trade-offs
+
+### Pair Programming Sessions
+
+**When to Use:**
+- Practicing collaborative coding
+- Preparing for pair programming interviews
+- Learning real-world coding scenarios
+- Building practical skills
+
+**How to Approach:**
+1. **Understand the Task**: Read the scenario carefully
+2. **Discuss Approach**: Talk through your plan
+3. **Code Together**: Think out loud while coding
+4. **Consider Edge Cases**: Discuss potential issues
+5. **Review Code**: Check for improvements
+
+**Best Practices:**
+- Communicate constantly
+- Ask questions
+- Consider production concerns
+- Write clean, readable code
+- Think about testing and error handling
+
 ## Features
 
 - **Three Interview Types**: LeetCode coding, System Design, and Pair Programming
