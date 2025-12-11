@@ -1,372 +1,127 @@
 # Mock Interview System
 
-A comprehensive mock interview framework designed to help you practice for technical interviews at startups and smaller companies. This system supports LeetCode-style coding problems, system design questions, and pair programming scenarios.
+A comprehensive mock interview framework designed to help you practice for technical interviews. This system supports LeetCode-style coding problems, system design questions, and pair programming scenarios.
 
-## 🎯 How to Use This Folder
+## 📚 Contents
 
-### Overview
+### Core Scripts
+- **interview_runner.py**: Main script to run mock interviews interactively
+- **question_bank.py**: Question management and selection logic
+- **session_tracker.py**: Session tracking and history management
+- **analytics.py**: Performance analytics and report generation
 
-This folder contains a complete mock interview system that helps you practice for technical interviews. It tracks your progress, provides analytics, and offers three types of interview practice: LeetCode coding, System Design, and Pair Programming.
+### Question Banks
+- **question_banks/leetcode_questions.json**: LeetCode-style coding problems
+- **question_banks/system_design_questions.json**: System design scenarios
+- **question_banks/pair_programming_scenarios.json**: Pair programming tasks
 
-### Quick Start
+### Data Storage
+- **sessions/session_history.json**: All interview session data
+- **reports/**: Generated performance reports (created automatically)
 
-1. **Run an Interview**: `python interview_runner.py`
-2. **View Analytics**: `python analytics.py`
-3. **Review Sessions**: Check `sessions/session_history.json`
+## 🎯 Purpose
 
-## 🔧 How to Address Each Interview Type
+This folder provides:
+- **Interview practice**: Simulate real interview conditions with timers and tracking
+- **Progress tracking**: Monitor your performance over time
+- **Analytics**: Identify weak areas and track improvement
+- **Multiple interview types**: Practice coding, system design, and pair programming
 
-### LeetCode Interviews
+## 📖 Features
 
-**When to Use:**
-- Practicing coding problems
-- Preparing for technical coding rounds
-- Building problem-solving speed
-- Learning algorithmic patterns
+### Three Interview Types
 
-**How to Approach:**
-1. **Select Difficulty**: Start with Easy, progress to Medium/Hard
-2. **Read Carefully**: Understand the problem fully before coding
-3. **Think First**: Plan your approach, consider edge cases
-4. **Code**: Implement your solution
-5. **Test**: Verify with examples
-6. **Review**: Check optimal solutions after completion
+1. **LeetCode Interviews**
+   - Coding problems from Easy to Hard difficulty
+   - Categories: Arrays, Strings, Trees, Linked Lists, etc.
+   - Built-in timer functionality
+   - Hints available for problems
+   - Integration with existing problem files
 
-**Best Practices:**
-- Time yourself (Easy: 15-20 min, Medium: 25-35 min, Hard: 40-60 min)
-- Explain your thought process out loud
-- Start with brute force, then optimize
-- Handle edge cases explicitly
+2. **System Design Interviews**
+   - Real-world system design scenarios
+   - Requirements clarification guidance
+   - Evaluation criteria provided
+   - Startup-scale problems
+   - Expected duration guidance
 
-### System Design Interviews
+3. **Pair Programming Sessions**
+   - Real-world coding tasks
+   - API endpoint implementation
+   - Data processing challenges
+   - Feature implementation scenarios
+   - Bug fixing and refactoring tasks
 
-**When to Use:**
-- Preparing for system design rounds
-- Learning to design scalable systems
-- Understanding architecture patterns
-- Practicing communication skills
+### Analytics and Tracking
 
-**How to Approach:**
-1. **Clarify Requirements**: Ask about scale, constraints, features
-2. **Estimate Scale**: Calculate traffic, storage, bandwidth
-3. **High-Level Design**: Draw the overall architecture
-4. **Detail Components**: Deep dive into specific parts
-5. **Address Scaling**: Handle scalability challenges
-6. **Discuss Trade-offs**: Consider alternatives
+- **Session metrics**: Time per question, completion rates, self-ratings
+- **Performance analysis**: Trends over time, weak area identification
+- **Personalized recommendations**: Suggestions for improvement
+- **Report generation**: Detailed performance reports saved automatically
 
-**Best Practices:**
-- Always clarify requirements first
-- Start simple, add complexity gradually
-- Draw clear diagrams
-- Think out loud
-- Discuss trade-offs
+## 🔧 Usage
 
-### Pair Programming Sessions
-
-**When to Use:**
-- Practicing collaborative coding
-- Preparing for pair programming interviews
-- Learning real-world coding scenarios
-- Building practical skills
-
-**How to Approach:**
-1. **Understand the Task**: Read the scenario carefully
-2. **Discuss Approach**: Talk through your plan
-3. **Code Together**: Think out loud while coding
-4. **Consider Edge Cases**: Discuss potential issues
-5. **Review Code**: Check for improvements
-
-**Best Practices:**
-- Communicate constantly
-- Ask questions
-- Consider production concerns
-- Write clean, readable code
-- Think about testing and error handling
-
-## Features
-
-- **Three Interview Types**: LeetCode coding, System Design, and Pair Programming
-- **Interactive CLI**: User-friendly command-line interface for conducting interviews
-- **Timer Functionality**: Built-in timers to track your performance
-- **Progress Tracking**: Automatic session tracking and performance metrics
-- **Analytics & Reports**: Detailed analytics to identify weak areas and track improvement
-- **Startup-Focused**: Questions tailored for smaller companies (practical, less theoretical)
-- **Question Banks**: Curated questions with varying difficulty levels
-
-## Quick Start
-
-### Running a Mock Interview
-
+### Running an Interview
 ```bash
-cd 10_Mock_Interviews
 python interview_runner.py
 ```
 
-This will launch the interactive interview system. Follow the on-screen prompts to:
-1. Select interview type (LeetCode, System Design, or Pair Programming)
-2. Choose difficulty level
-3. Start practicing!
-
 ### Viewing Analytics
-
 ```bash
 python analytics.py
 ```
 
-This generates and displays a comprehensive performance report showing:
-- Overall statistics
-- Performance by interview type
-- Time trends
-- Weak areas identification
-- Personalized recommendations
-
-## Directory Structure
-
-```
-10_Mock_Interviews/
-├── interview_runner.py          # Main interview execution script
-├── question_bank.py              # Question management and selection
-├── session_tracker.py            # Session tracking and history
-├── analytics.py                  # Performance analytics and reports
-├── question_banks/
-│   ├── leetcode_questions.json
-│   ├── system_design_questions.json
-│   └── pair_programming_scenarios.json
-├── sessions/
-│   └── session_history.json      # All session data
-├── reports/
-│   └── (generated performance reports)
-└── README.md
-```
-
-## Interview Types
-
-### 1. LeetCode Interview
-
-Practice coding problems similar to those asked in technical interviews.
-
-**Features:**
-- Problems from Easy to Hard difficulty
-- Categories: Arrays, Strings, Trees, Linked Lists, etc.
-- Timer for each problem
-- Hints available
-- Integration with existing problem files
-
-**Example Session:**
-```
-1. Select "Start LeetCode Interview"
-2. Choose difficulty (Easy/Medium/Hard/Random)
-3. Select number of questions (1-3)
-4. Work on problems with timer
-5. Mark as done when finished
-6. Rate your performance
-```
-
-**Commands During Interview:**
+### Session Commands
 - `done` - Mark question as completed
 - `hint` - Get hints for the problem
 - `skip` - Skip to next question
 - `show` - Redisplay the question
 
-### 2. System Design Interview
+## 📖 What's Included
 
-Practice designing scalable systems for startup-scale applications.
+### Interview Types Details
 
-**Features:**
-- Real-world system design scenarios
-- Requirements clarification guidance
-- Evaluation criteria provided
-- Startup-scale problems (not Google-scale)
-- Expected duration guidance
+**LeetCode Interviews:**
+- Problems organized by difficulty and category
+- Timer tracking for each problem
+- Performance rating system
+- Notes and observations tracking
 
-**Example Topics:**
-- URL Shortener (bit.ly)
-- Todo Application
-- Real-time Chat Application
-- Analytics Dashboard
-- File Storage System
-- Rate Limiting System
+**System Design Interviews:**
+- Topics: URL shorteners, chat systems, analytics dashboards, file storage, rate limiting
+- Structured interview format guidance
+- Scale estimation practice
+- Architecture design scenarios
 
-**Interview Structure:**
-1. Requirements clarification (5-10 min)
-2. High-level design (10-15 min)
-3. Detailed design (15-20 min)
-4. Scaling considerations (10-15 min)
-5. Follow-up questions (5-10 min)
-
-### 3. Pair Programming Session
-
-Practice collaborative coding scenarios common in startup environments.
-
-**Features:**
-- Real-world coding tasks
-- API endpoint implementation
-- Data processing challenges
-- Feature implementation
-- Bug fixing and refactoring
-- Integration tasks
-
-**Example Scenarios:**
-- Build a REST API endpoint
-- Process and aggregate data
-- Implement a search feature
-- Debug performance issues
-- Refactor legacy code
-- Integrate third-party APIs
-
-## Usage Guide
-
-### Starting an Interview Session
-
-1. **Launch the system:**
-   ```bash
-   python interview_runner.py
-   ```
-
-2. **Select interview type:**
-   - Option 1: LeetCode Interview
-   - Option 2: System Design Interview
-   - Option 3: Pair Programming Session
-
-3. **Choose difficulty:**
-   - Easy: Good for warm-up and fundamentals
-   - Medium: Standard interview level
-   - Hard: Advanced practice
-   - Random: Mix of difficulties
-
-4. **Work through questions:**
-   - Read the problem carefully
-   - Think through your approach
-   - Implement your solution
-   - Use hints if stuck
-   - Mark as done when finished
-
-5. **Rate your performance:**
-   - Provide a self-rating (1-5)
-   - Add notes about what you learned
-   - Review your session
-
-### Viewing Session History
-
-From the main menu, select "View Recent Sessions" to see:
-- Recent interview sessions
-- Completion status
-- Duration and ratings
-- Question details
-
-### Generating Analytics Reports
-
-Run the analytics module to get insights:
-
-```bash
-python analytics.py
-```
-
-**Report includes:**
-- Overall statistics (sessions, completion rates)
-- Performance by interview type
-- Time trends (improvement over time)
-- Weak areas identification
-- Personalized recommendations
-
-**Saving reports:**
-Reports are automatically saved to the `reports/` directory with timestamps.
-
-## Best Practices
-
-### For LeetCode Interviews
-
-1. **Time Management:**
-   - Easy: 15-20 minutes
-   - Medium: 25-35 minutes
-   - Hard: 40-60 minutes
-
-2. **Problem-Solving Approach:**
-   - Read the problem carefully
-   - Clarify edge cases
-   - Think out loud
-   - Start with brute force, then optimize
-   - Test with examples
-
-3. **Communication:**
-   - Explain your thought process
-   - Discuss trade-offs
-   - Ask clarifying questions
-   - Walk through examples
-
-### For System Design Interviews
-
-1. **Requirements First:**
-   - Always clarify requirements
-   - Ask about scale and constraints
-   - Understand functional vs non-functional requirements
-
-2. **Start Simple:**
-   - Begin with basic design
-   - Add complexity gradually
-   - Justify your decisions
-
-3. **Key Areas to Cover:**
-   - API design
-   - Database schema
-   - Caching strategy
-   - Scaling considerations
-   - Trade-off analysis
-
-### For Pair Programming Sessions
-
-1. **Collaboration:**
-   - Think out loud
-   - Discuss approach before coding
-   - Ask for feedback
-   - Consider edge cases together
-
-2. **Code Quality:**
-   - Write clean, readable code
-   - Add comments where needed
-   - Consider error handling
-   - Think about testing
-
-3. **Real-World Focus:**
-   - Consider production concerns
-   - Discuss performance implications
-   - Think about maintainability
-
-## Tracking Your Progress
-
-### Session Metrics Tracked
-
-- **Time per question**: How long you spend on each problem
-- **Completion rate**: Percentage of questions completed
-- **Self-ratings**: Your assessment of performance (1-5)
-- **Notes**: Your observations and learnings
+**Pair Programming Sessions:**
+- REST API endpoint implementation
+- Data processing and aggregation
+- Search feature implementation
+- Performance debugging
+- Code refactoring scenarios
+- Third-party API integration
 
 ### Analytics Features
 
-- **Trend Analysis**: See if you're improving over time
-- **Weak Area Identification**: Automatically identifies categories/questions to focus on
-- **Performance by Type**: Compare performance across interview types
-- **Recommendations**: Personalized suggestions for improvement
+- Overall statistics (total sessions, completion rates)
+- Performance breakdown by interview type
+- Time trend analysis
+- Weak area identification
+- Personalized improvement recommendations
 
-### Regular Practice
+## 🔗 Integration
 
-Aim for:
-- **3-5 sessions per week** for consistent improvement
-- **Mix of interview types** to be well-rounded
-- **Review weak areas** regularly
-- **Track progress** using analytics
+This system integrates with:
+- **03_Blind_75/**: References existing LeetCode problem files
+- **08_System_Design/**: Uses system design concepts and examples
+- **07_Study_Guides/**: Complements study guide materials
 
-## Customization
+## 📝 Customization
 
 ### Adding Questions
+Edit the JSON files in `question_banks/` to add new questions following the existing format.
 
-Edit the JSON files in `question_banks/`:
-
-- `leetcode_questions.json`: Add LeetCode problems
-- `system_design_questions.json`: Add system design scenarios
-- `pair_programming_scenarios.json`: Add pair programming tasks
-
-**Question Format Example:**
+### Question Format
 ```json
 {
   "id": "unique_id",
@@ -378,95 +133,18 @@ Edit the JSON files in `question_banks/`:
 }
 ```
 
-### Filtering Questions
-
-The system supports filtering by:
+### Filtering Options
+Questions can be filtered by:
 - Difficulty level
 - Category/tags
 - Startup-friendly flag
 - Question type
 
-## Integration with Existing Code
+## 🎯 Key Capabilities
 
-The system integrates with your existing problem files:
-
-- **LeetCode problems**: References files in `03_Blind_75/`
-- **System design materials**: Uses concepts from `08_System_Design/`
-- **Test runners**: Can validate solutions using existing test infrastructure
-
-## Tips for Success
-
-1. **Consistency is Key**: Practice regularly, even if just 30 minutes a day
-2. **Focus on Weak Areas**: Use analytics to identify and improve weak spots
-3. **Time Yourself**: Get comfortable with time pressure
-4. **Review Solutions**: After each session, review optimal solutions
-5. **Explain Out Loud**: Practice explaining your approach (even to yourself)
-6. **Start Simple**: Don't jump to complex solutions immediately
-7. **Learn Patterns**: Focus on recognizing patterns, not memorizing solutions
-
-## Troubleshooting
-
-### No Questions Found
-
-If you see "No questions found matching your criteria":
-- Try selecting "Random" difficulty
-- Check that question bank files exist in `question_banks/`
-- Verify JSON files are valid
-
-### Session Not Saving
-
-- Check that `sessions/` directory exists and is writable
-- Verify file permissions
-- Check for JSON syntax errors in session history
-
-### Analytics Not Working
-
-- Ensure you have completed at least one session
-- Check that `session_history.json` exists and is valid
-- Verify all dependencies are installed
-
-## Example Workflow
-
-**Week 1:**
-- Monday: 2 Easy LeetCode problems
-- Wednesday: 1 System Design question
-- Friday: 1 Pair Programming scenario
-
-**Week 2:**
-- Review analytics from Week 1
-- Focus on identified weak areas
-- Increase difficulty gradually
-
-**Week 3:**
-- Mix of Medium difficulty problems
-- More system design practice
-- Review time trends
-
-**Week 4:**
-- Full interview simulations (45-60 min)
-- Hard problems for challenge
-- Final analytics review
-
-## Resources
-
-- **LeetCode Problems**: See `03_Blind_75/` for problem files
-- **System Design**: See `08_System_Design/` for design concepts
-- **Study Guides**: Check `07_Study_Guides/` for interview tips
-
-## Support
-
-For issues or questions:
-1. Check this README
-2. Review the code comments
-3. Check session history for debugging
-
-## License
-
-Part of the LeetCode Study Guide repository.
-
----
-
-**Good luck with your interviews! 🚀**
-
-Remember: The goal isn't to solve every problem perfectly, but to demonstrate problem-solving skills, communication, and continuous learning.
-
+- **Interactive CLI**: User-friendly command-line interface
+- **Timer functionality**: Track time spent on each problem
+- **Progress tracking**: Automatic session history
+- **Analytics reports**: Detailed performance insights
+- **Question management**: Curated question banks with varying difficulty
+- **Session history**: Review past interviews and performance
