@@ -21,9 +21,29 @@ def groupAnagrams(strs):
     Returns:
         List of lists, where each inner list contains anagrams
     """
-    # TODO: Implement your solution here
-    pass
 
+    
+    # m * n * 26 is possible using a count of each char 0-26
+    # m = total number of input strings, n = avergage len of str * 26
+    # Hashmap is used with pattern(char count) as key : Value = list of anagrams
+    res = defaultdict(list) # mapping charcount to list of anagrams
+    for s in strs: # loop through str with s being each string
+        count = [0] * 26 # set to 26 char
+        for c in s:
+            count[ord(c) - ord('a')] += 1 # a - a = 0, map a to 0
+        res[tuple(count)].append(s)
+
+    return list(res.values())
+
+    # Sorted Solution:
+    # def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    #     res = defaultdict(list)
+    #     for s in strs:
+    #         count = [0] * 26
+    #         for c in s:
+    #             count[ord(c) - ord('a')] += 1
+    #         res[tuple(count)].append(s)
+    #     return list(res.values())
 
 # Test cases
 def test_group_anagrams():
