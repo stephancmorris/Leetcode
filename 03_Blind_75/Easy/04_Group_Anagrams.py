@@ -23,7 +23,7 @@ def groupAnagrams(strs):
     """
 
     
-    # m * n * 26 is possible using a count of each char 0-26
+    # Solution 1: m * n * 26 is possible using a count of each char 0-26
     # m = total number of input strings, n = avergage len of str * 26
     # Hashmap is used with pattern(char count) as key : Value = list of anagrams
     res = defaultdict(list) # mapping charcount to list of anagrams
