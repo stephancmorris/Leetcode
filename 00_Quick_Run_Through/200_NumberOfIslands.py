@@ -12,6 +12,7 @@ class Solution:
                 row, col = searchQueue.popleft()
                 directions = [[1,0], [-1,0], [0,1], [0,-1]]
 
+                #Up,Down,Right, Left for current r,c index
                 for dr, dc in directions:
                     r,c = row+dr, col+dc
 
@@ -21,8 +22,12 @@ class Solution:
 
 
         count = 0 # count islands
+
+        #Rows and Columns will be used to make sure we're in the right range
         rows = len(grid)
         cols = len(grid[0])
+
+        #Track visited elements
         visit = set()
 
         for r in range(rows):
