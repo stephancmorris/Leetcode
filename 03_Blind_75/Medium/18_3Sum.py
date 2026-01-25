@@ -22,7 +22,34 @@ def threeSum(nums):
         List of unique triplets that sum to zero
     """
     # TODO: Implement your solution here
-    pass
+    result = []
+    nums.sort()
+
+    for i,v in enumerate(nums):
+        
+        if (i > 0) & (v == nums[i-1]): #moves the index and skips duplicates
+            continue 
+
+        left_pointer = (i + 1)
+        right_pointer = (len(nums) - 1)
+
+        while left_pointer < right_pointer:
+            currentSum = v + nums[left_pointer] + nums[right_pointer]
+
+            if currentSum > 0:
+                right_pointer -= 1
+
+            elif currentSum < 0:
+                left_pointer += 1
+
+            else: 
+                result.append([v, nums[left_pointer], nums[right_pointer]])
+                left += 1
+                
+                #continue with an additional while loop to evaluate more solutions
+            
+        
+    return result 
 
 
 # Test cases

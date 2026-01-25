@@ -13,7 +13,7 @@ class Solution:
 
             if matrix and matrix[0]:
 
-                for row in matrix[::-1]:
-                    res.append(row.pop(0)) #move back up in the spiral / goes back to while loop
+                for row in matrix[::-1]: #move back up in the spiral
+                    res.append(row.pop(0))  # add number when moved back up / goes back to while loop
 
-        return res
+        return res #return result 
